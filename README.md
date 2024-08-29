@@ -1,2 +1,2 @@
 # MyWedding
-Ngọc Dân
+Ngọc Dân & Phương Linh
