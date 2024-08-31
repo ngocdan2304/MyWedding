@@ -11138,6 +11138,12 @@ a.text-dark:focus {
   position: relative;
 }
 
+#story div,
+#story img {
+  border-radius: 4px;
+}
+
+
 .section-bg-parallax {
   position: fixed;
   top: 0;
@@ -11154,4 +11160,10 @@ a.text-dark:focus {
   background-position: center;
   background-color: rgba(46, 44, 100, 0.01);
   background-repeat: no-repeat;
+}
+
+.statusText {
+  margin-top: 8px;
+  color: green;
+  font-size: 14px;
 }
