@@ -8,6 +8,12 @@
         } else {
             $('.navbar').fadeOut('slow').css('display', 'none');
         }
+
+        if ($(this).scrollTop() > $("#gallery").offset().top) {
+            $(".section-bg-parallax").addClass("hide");
+        } else {
+            $(".section-bg-parallax").removeClass("hide");
+        }
     });
 
 
@@ -82,6 +88,19 @@
         return false;
     });
 
+    let htmlImages = "";
+    [...Array(45).keys()].forEach(index => {
+        htmlImages += `
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-${index + 1}.jpg" alt="">
+                <a href="img/gallery-${index + 1}.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+        `
+    });
+
+    document.querySelector("#gallery .gallery-carousel").innerHTML = htmlImages;
 
     // Gallery carousel
     $(".gallery-carousel").owlCarousel({
